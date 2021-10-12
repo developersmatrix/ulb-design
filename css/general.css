@@ -1,3 +1,17 @@
+/* ************* */
+/* 
+--Colors
+primary:#17d6ee
+
+--Background colors
+primary:#1e2526
+*/
+/* ************* */
+
+/* ************* */
+/* Basic reset */
+/* ************* */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +24,12 @@ html {
 
 body {
   font-size: 1.6rem;
-  color: #333;
+  color: #ddd;
+  background-color: #1e2526;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+  height: 200vh;
+  position: relative;
 }
 
 a:link,
