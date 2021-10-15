@@ -1,0 +1,15 @@
+.mib-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 9.6rem;
+  background-color: #3c3c4d;
+  border-collapse: collapse;
+}
+
+.mib-table th,
+.mib-table td {
+  border: 1px solid salmon;
+  text-align: center;
+  width: 9.6rem;
+  padding: 0.4rem 0.8rem;
+}
