@@ -1,107 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/mib.css" />
-    <link rel="stylesheet" href="css/updatecollection.css" />
-    <title>TP Virajpet</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <!-- LOGO -->
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img
-            src="img/logo.png"
-            alt="Town Panchayath Virajpet Logo"
-            class="logo-img"
-          />
-          <!-- <svg>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/mib.css" />
+  <link rel="stylesheet" href="css/updatecollection.css" />
+  <title>TP Virajpet</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.png" alt="Town Panchayath Virajpet Logo" class="logo-img" />
+        <!-- <svg>
             <use href="#logo"></use>
           </svg> -->
 
-          virajpet
-        </a>
-      </div>
-      <!-- Main Navigation -->
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a class="nav-link" href="index.html">Dashboard</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-link" href="mib.html">MIB</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-link" href="#">Work Schemes</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-link" href="#">Housing</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-link" href="#">Miscellaneous</a>
-          </li>
-        </ul>
-      </nav>
+        virajpet
+      </a>
+    </div>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-link" href="index.html">Dashboard</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-link" href="mib.html">MIB</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-link" href="#">Work Schemes</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-link" href="#">Housing</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-link" href="#">Miscellaneous</a>
+        </li>
+      </ul>
+    </nav>
 
-      <div class="nav-toggle">
-        <div class="hamburger"></div>
-      </div>
-    </header>
-    <div class="dummy"></div>
+    <div class="nav-toggle">
+      <div class="hamburger"></div>
+    </div>
+  </header>
+  <div class="dummy"></div>
 
-    <!-- Update monthly collection -->
-    <div class="container">
-      <div class="container__general--info">
-        <form>
-          <div class="form__general--info">
-            <div class="input__container">
-              <label for="totalnoofproperties">Total No of properties</label>
-              <input type="text" id="totalnoofproperties" />
-            </div>
-            <div class="input__container">
-              <label for="openingbalance">Opening Balance</label>
-              <input type="text" id="openingbalance" />
-            </div>
-            <div class="input__container">
-              <label for="currentyeardemand">Current year Demand</label>
-              <input type="text" id="currentyeardemand" />
-            </div>
-            <div class="input__container">
-              <label for="totaldemand">Total Demand</label>
-              <input type="text" id="totaldemand" disabled />
-            </div>
+  <!-- Update monthly collection -->
+  <div class="container">
+    <div class="heading__primary">
+      <h1>Property Tax Collection</h1>
+    </div>
+    <div class="container__general--info">
+      <form>
+        <div class="form__general--info">
+          <div class="input__container">
+            <label for="totalnoofproperties">Total No of properties</label>
+            <input type="text" id="totalnoofproperties" />
           </div>
-          <div class="submit__button">
-            <button type="submit">Update</button>
+          <div class="input__container">
+            <label for="openingbalance">Opening Balance</label>
+            <input type="text" id="openingbalance" />
           </div>
-        </form>
-      </div>
-      <div class="container__monthly--update">
-        <form></form>
+          <div class="input__container">
+            <label for="currentyeardemand">Current year Demand</label>
+            <input type="text" id="currentyeardemand" />
+          </div>
+          <div class="input__container">
+            <label for="totaldemand">Total Demand</label>
+            <input type="text" id="totaldemand" disabled />
+          </div>
+        </div>
+        <div class="submit__button">
+          <button type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+    <div class="container__monthly--update">
+      <form>
+        <div class="select__container">
+          <label for="year">Year</label>
+          <select name="year" id="year">
+            <option value="">Select Year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+        </div>
+        <div class="select__container">
+          <label for="month">Month</label>
+          <select name="month" id="month">
+            <option value="">Select month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+        <div class="select__container">
+          <label for="ob">Collection from Opening Balance</label>
+          <input type="number">
+        </div>
+        <div class="select__container">
+          <label for="cyd">Collection from Current Year Demand</label>
+          <input type="number">
+        </div>
+        <div class="select__container">
+          <label for="tc">Total Collection</label>
+          <input type="number" disabled>
+        </div>
+        <div class="button_container">
+          <button type="submit">edit</button>
+        </div>
+      </form>
+
+      <div class="add__button--container">
+        <button>Add</button>
       </div>
     </div>
+  </div>
 
-    <!-- <svg
+  <!-- <svg
       class="logo"
       width="353mm"
       height="500mm"
@@ -343,5 +389,6 @@
         </g>
       </symbol>
     </svg> -->
-  </body>
+</body>
+
 </html>
