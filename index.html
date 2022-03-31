@@ -1,394 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/mib.css" />
+    <link rel="stylesheet" href="css/updatecollection.css" />
+    <title>TP Virajpet</title>
+  </head>
 
-  <link rel="stylesheet" href="css/general.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/mib.css" />
-  <link rel="stylesheet" href="css/updatecollection.css" />
-  <title>TP Virajpet</title>
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header class="header">
-    <!-- LOGO -->
-    <div class="logo">
-      <a href="index.html" class="logo-link">
-        <img src="img/logo.png" alt="Town Panchayath Virajpet Logo" class="logo-img" />
-        <!-- <svg>
-            <use href="#logo"></use>
-          </svg> -->
-
-        virajpet
-      </a>
-    </div>
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li class="nav-list__item">
-          <a class="nav-link" href="index.html">Dashboard</a>
-        </li>
-        <li class="nav-list__item">
-          <a class="nav-link" href="mib.html">MIB</a>
-        </li>
-        <li class="nav-list__item">
-          <a class="nav-link" href="#">Work Schemes</a>
-        </li>
-        <li class="nav-list__item">
-          <a class="nav-link" href="#">Housing</a>
-        </li>
-        <li class="nav-list__item">
-          <a class="nav-link" href="#">Miscellaneous</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="nav-toggle">
-      <div class="hamburger"></div>
-    </div>
-  </header>
-  <div class="dummy"></div>
-
-  <!-- Update monthly collection -->
-  <div class="container">
-    <div class="heading__primary">
-      <h1>Property Tax Collection</h1>
-    </div>
-    <div class="container__general--info">
-      <form>
-        <div class="form__general--info">
-          <div class="input__container">
-            <label for="totalnoofproperties">Total No of properties</label>
-            <input type="text" id="totalnoofproperties" />
-          </div>
-          <div class="input__container">
-            <label for="openingbalance">Opening Balance</label>
-            <input type="text" id="openingbalance" />
-          </div>
-          <div class="input__container">
-            <label for="currentyeardemand">Current year Demand</label>
-            <input type="text" id="currentyeardemand" />
-          </div>
-          <div class="input__container">
-            <label for="totaldemand">Total Demand</label>
-            <input type="text" id="totaldemand" disabled />
-          </div>
-        </div>
-        <div class="submit__button">
-          <button type="submit">Update</button>
-        </div>
-      </form>
-    </div>
-    <div class="container__monthly--update">
-      <form>
-        <div class="select__container">
-          <label for="year">Year</label>
-          <select name="year" id="year">
-            <option value="">Select Year</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-          </select>
-        </div>
-        <div class="select__container">
-          <label for="month">Month</label>
-          <select name="month" id="month">
-            <option value="">Select month</option>
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-          </select>
-        </div>
-        <div class="select__container">
-          <label for="ob">Collection from Opening Balance</label>
-          <input type="number">
-        </div>
-        <div class="select__container">
-          <label for="cyd">Collection from Current Year Demand</label>
-          <input type="number">
-        </div>
-        <div class="select__container">
-          <label for="tc">Total Collection</label>
-          <input type="number" disabled>
-        </div>
-        <div class="button_container">
-          <button type="submit">edit</button>
-        </div>
-      </form>
-
-      <div class="add__button--container">
-        <button>Add</button>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img
+            src="img/logo.png"
+            alt="Town Panchayath Virajpet Logo"
+            class="logo-img"
+          />
+          virajpet
+        </a>
       </div>
-    </div>
-  </div>
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a class="nav-link" href="index.html">DCB</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-link" href="mib.html">Work Schemes</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-link" href="#">SCSP-TSP</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-link" href="#">Housing</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-link" href="#">Miscellaneous</a>
+          </li>
+        </ul>
+      </nav>
 
-  <!-- <svg
-      class="logo"
-      width="353mm"
-      height="500mm"
-      viewBox="0 0 353 500"
-      version="1.1"
-      id="svg5"
-      inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-      sodipodi:docname="logo-single.svg"
-      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:svg="http://www.w3.org/2000/svg"
-    >
-      <symbol id="logo">
-        <sodipodi:namedview
-          id="namedview7"
-          pagecolor="#505050"
-          bordercolor="#eeeeee"
-          borderopacity="1"
-          inkscape:pageshadow="0"
-          inkscape:pageopacity="0"
-          inkscape:pagecheckerboard="0"
-          inkscape:document-units="mm"
-          showgrid="false"
-          inkscape:zoom="0.31973402"
-          inkscape:cx="761.57051"
-          inkscape:cy="156.37998"
-          inkscape:window-width="1362"
-          inkscape:window-height="744"
-          inkscape:window-x="0"
-          inkscape:window-y="20"
-          inkscape:window-maximized="1"
-          inkscape:current-layer="layer1"
-          units="mm"
-        />
-        <defs id="defs2" />
-        <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
-          <rect
-            style="fill: #ff00ff; fill-opacity: 0; stroke-width: 0.264583"
-            id="rect846"
-            width="127.62253"
-            height="79.063622"
-            x="-107.4477"
-            y="81.092461"
-          />
-          <rect
-            style="fill: #ff00ff; fill-opacity: 0; stroke-width: 0.264583"
-            id="rect870"
-            width="105.99978"
-            height="74.94809"
-            x="-85.824951"
-            y="85.207993"
-          />
-          <rect
-            style="fill: #ff00ff; fill-opacity: 0; stroke-width: 0.264583"
-            id="rect872"
-            width="130.88007"
-            height="86.084496"
-            x="-64.785957"
-            y="104.28344"
-            ry="0"
-          />
-          <g
-            id="g24206-1-3"
-            transform="translate(-250.67978,276.3454)"
-            style="fill: #ff1c00; fill-opacity: 0.847059"
-          />
-          <g id="g1804" transform="translate(265.96474,-261.06044)">
-            <g id="g1518">
-              <rect
-                style="
-                  fill: #131b25;
-                  fill-opacity: 1;
-                  stroke: #0027ff;
-                  stroke-width: 0.569912;
-                  stroke-miterlimit: 4;
-                  stroke-dasharray: none;
-                  stroke-opacity: 0;
-                "
-                id="rect976-6-6"
-                width="240"
-                height="240"
-                x="-265.67978"
-                y="261.3454"
-                ry="18.308264"
-              />
-            </g>
-            <rect
-              style="
-                fill: #ff1c00;
-                fill-opacity: 0.847059;
-                stroke: #ff1c00;
-                stroke-width: 0.158065;
-                stroke-opacity: 0.847059;
-              "
-              id="rect4374-3-2-7"
-              width="15"
-              height="30"
-              x="-150.67976"
-              y="366.3454"
-              ry="6"
-            />
-            <rect
-              style="
-                fill: #ff1c00;
-                fill-opacity: 0.847059;
-                stroke-width: 0.158065;
-              "
-              id="rect4374-3-9-6-5"
-              width="15"
-              height="30"
-              x="-90.679779"
-              y="426.3454"
-              ry="6"
-            />
-            <rect
-              style="
-                fill: #ff1c00;
-                fill-opacity: 0.847059;
-                stroke-width: 0.156108;
-              "
-              id="rect4374-8-5"
-              width="14.628551"
-              height="30.004589"
-              x="41.204948"
-              y="29.435619"
-              transform="matrix(0.9999041,0.01384793,-0.02057511,0.99978832,-250.67978,276.34541)"
-              ry="6.0009179"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff78;
-                stroke-width: 2.64584;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-79-6"
-              width="12.146243"
-              height="27.440094"
-              x="-143.22624"
-              y="309.7652"
-              transform="matrix(0.99988366,0.0152531,-0.01867999,0.99982551,0,0)"
-              ry="5.488019"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff87;
-                stroke-width: 2.5465;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-7-2-2"
-              width="12.145567"
-              height="27.456612"
-              x="-202.11758"
-              y="369.69745"
-              transform="matrix(0.99988351,0.01526313,-0.01866771,0.99982574,0,0)"
-              ry="5.4913225"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff87;
-                stroke-width: 2.54583;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-2-02-9"
-              width="12.146395"
-              height="27.440081"
-              x="-83.236099"
-              y="308.85867"
-              transform="matrix(0.99988367,0.0152529,-0.01868022,0.99982551,0,0)"
-              ry="5.4880166"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff87;
-                stroke-width: 2.54582;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-2-0-37-1"
-              width="12.146395"
-              height="27.440081"
-              x="-82.115067"
-              y="368.85202"
-              transform="matrix(0.99988367,0.0152529,-0.01868022,0.99982551,0,0)"
-              ry="5.4880166"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff87;
-                stroke-width: 2.54582;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-2-0-3-5-2"
-              width="12.146395"
-              height="27.440081"
-              x="-200.97401"
-              y="430.67575"
-              transform="matrix(0.99988367,0.0152529,-0.01868022,0.99982551,0,0)"
-              ry="5.4880166"
-            />
-            <rect
-              style="
-                fill: #00ff78;
-                fill-opacity: 0.0415639;
-                stroke: #00ff87;
-                stroke-width: 2.54582;
-                stroke-miterlimit: 4;
-                stroke-dasharray: none;
-                stroke-opacity: 1;
-              "
-              id="rect4374-1-2-0-3-6-9-7"
-              width="12.146395"
-              height="27.440081"
-              x="-140.98413"
-              y="429.76059"
-              transform="matrix(0.99988367,0.0152529,-0.01868022,0.99982551,0,0)"
-              ry="5.4880166"
-            />
-          </g>
-        </g>
-      </symbol>
-    </svg> -->
-</body>
+      <div class="nav-toggle">
+        <div class="hamburger"></div>
+      </div>
+    </header>
+    <div class="dummy"></div>
 
+    <!-- Update monthly collection -->
+    <!-- <div class="container">
+      <div class="container__general--info">
+        <div class="heading__primary">
+          <h1>Property Tax Collection</h1>
+        </div>
+        <form>
+          <div class="form__general--info">
+            <div class="input__container">
+              <label for="totalnoofproperties">Total No of properties</label>
+              <input type="text" id="totalnoofproperties" />
+            </div>
+            <div class="input__container">
+              <label for="openingbalance">Opening Balance</label>
+              <input type="text" id="openingbalance" />
+            </div>
+            <div class="input__container">
+              <label for="currentyeardemand">Current year Demand</label>
+              <input type="text" id="currentyeardemand" />
+            </div>
+            <div class="input__container">
+              <label for="totaldemand">Total Demand</label>
+              <input type="text" id="totaldemand" disabled />
+            </div>
+          </div>
+          <div class="submit__button">
+            <button type="submit">Update</button>
+          </div>
+        </form>
+      </div>
+      <div class="container__monthly--update">
+        <form>
+          <div class="select__container">
+            <label for="year">Year</label>
+            <select name="year" id="year">
+              <option value="">Select Year</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+          <div class="select__container">
+            <label for="month">Month</label>
+            <select name="month" id="month">
+              <option value="">Select month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <div class="select__container">
+            <label for="ob">Collection from Opening Balance</label>
+            <input type="number" />
+          </div>
+          <div class="select__container">
+            <label for="cyd">Collection from Current Year Demand</label>
+            <input type="number" />
+          </div>
+          <div class="select__container">
+            <label for="tc">Total Collection</label>
+            <input type="number" disabled />
+          </div>
+          <div class="button_container">
+            <button type="submit">edit</button>
+          </div>
+        </form>
+
+        <div class="add__button--container">
+          <button>Add</button>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="js/index.js
+    "></script>
+  </body>
 </html>

@@ -34,7 +34,13 @@ body {
 
 a:link,
 a:visited {
+  color: #ddd;
   text-decoration: none;
+}
+
+a:link:hover,
+a:visited:hover {
+  color: #fff;
 }
 
 ul,

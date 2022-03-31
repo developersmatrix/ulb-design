@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 9.6rem;
+  gap: 2rem;
 
   position: fixed;
   top: 0;
@@ -16,8 +17,8 @@
   border-bottom: 2px solid rgba(23, 212, 238, 0.475);
 }
 
-.logo-link:link,
-.logo-link:visited {
+.brand-link:link,
+.brand-link:visited {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -29,12 +30,12 @@
   color: #ddd;
 }
 
-.logo-link:hover,
-.logo-link:focus {
+.brand-link:hover,
+.brand-link:focus {
   color: #17d6ee;
 }
 
-.logo-link img {
+.brand-img {
   height: 5.6rem;
   border-radius: 1000px;
   /* box-shadow: 0 1px 2px #fff; */
@@ -66,12 +67,51 @@
   display: none;
 }
 
-@media (max-width: 20em) {
+@media (max-width: 64em) {
+  .header {
+    padding: 0 6.4rem;
+    font-size: 1.6rem;
+  }
+
+  .brand-link:link {
+    font-size: 1.6rem;
+  }
+
+  .brand-img {
+    height: 4.8rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .header {
+    padding: 0 4rem;
+  }
+
+  .brand-link:link,
+  .brand-link:visited {
+    gap: 1rem;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+  }
+
+  .brand-link:hover,
+  .brand-link:focus {
+    color: #17d6ee;
+  }
+
+  .brand-img {
+    height: 4.2rem;
+    border-radius: 1000px;
+    /* box-shadow: 0 1px 2px #fff; */
+  }
+
   .main-nav {
     position: absolute;
     top: 0;
     height: 100vh;
-    left: 0;
+    left: 50%;
     right: 0;
     background-color: #1e2526;
 
@@ -120,6 +160,7 @@
     top: 1.2rem;
     right: 1.6rem;
     padding: 1.6rem;
+    cursor: pointer;
     /* background-color: #ff00ff; */
   }
 
@@ -129,14 +170,34 @@
     content: "";
     display: block;
     height: 3px;
-    width: 2rem;
+    width: 2.5rem;
     background-color: #17d6ee;
+    transition: all 250ms;
   }
 
   .hamburger::before {
-    transform: translateY(-6px);
+    transform: translateY(-7px);
   }
   .hamburger::after {
-    transform: translateY(3px);
+    transform: translateY(4px);
+  }
+
+  .toggle-ham .hamburger {
+    transform: rotate(45deg);
+  }
+
+  .toggle-ham .hamburger::after {
+    /* transform: rotate(90deg); */
+    transform: translateY(-3px);
+  }
+
+  .toggle-ham .hamburger::before {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 27em) {
+  .main-nav {
+    left: 0;
   }
 }
